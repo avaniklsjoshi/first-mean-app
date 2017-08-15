@@ -56,8 +56,7 @@ router.put('/tasks/:id', function (req,res,next) {
 
     if(task.isDone){
         updTask.isDone      = task.isDone;
-    }
-    
+    }    
     if(task.title){
         updTask.title       = task.title
     }
