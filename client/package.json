@@ -1,9 +1,10 @@
 {
-  "name": "mytasklist",
+  "name": "angular-starter-kit",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run tsc:w\" \"npm run lite\"",
+     "start": "concurrently \"npm run tsc:w\" \"npm run lite\"",
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
@@ -11,7 +12,7 @@
     "postinstall": "typings install"
   },
   "keywords": [],
-  "author": "avani",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",

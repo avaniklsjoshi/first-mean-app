@@ -5,7 +5,7 @@ var bodyParser=require('body-parser'); //accept data from form and parse it and 
 var index= require('./routes/index');
 var tasks=require('./routes/tasks');  //template system
 
-port=3000;
+port=3003;
 var app=express();
 
 //======view engine====================
@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname,'client')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
+// routes =====================================
 app.use('/', index);
 app.use('/api',tasks);
 
