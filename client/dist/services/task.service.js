@@ -10,19 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-// import {TaskService} from './services/task.service';
-var AppComponent = (function () {
-    function AppComponent() {
+var http_1 = require("@angular/http");
+var TaskService = (function () {
+    function TaskService(http) {
+        this.http = http;
+        console.log('Task service initialized...');
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            templateUrl: './app/app.component.html',
-            styleUrls: ['./app/app.component.css'],
-        }),
-        __metadata("design:paramtypes", [])
-    ], AppComponent);
-    return AppComponent;
+    TaskService.prototype.getTasks = function () {
+        return this.http.get('http://localhost:3000/api/tasks')
+            .map(function (res) { return res.json(); });
+    };
+    TaskService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.Http])
+    ], TaskService);
+    return TaskService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TaskService = TaskService;
+//# sourceMappingURL=task.service.js.map
