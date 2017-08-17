@@ -50,7 +50,7 @@ router.delete('/tasks/:id', function (req,res,next) {
 });
 
 //update task
-router.put('/tasks/:id', function (req,res,next) {
+router.put('/task/:id', function (req,res,next) {
     var task                = req.body;
     var updTask             = {};
 
