@@ -5,7 +5,7 @@ var bodyParser=require('body-parser'); //accept data from form and parse it and 
 var index= require('./routes/index');
 var tasks=require('./routes/tasks');  //template system
 
-port=3000;
+port=3002;
 var app=express();
 
 //======view engine====================
